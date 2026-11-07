@@ -23,10 +23,10 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
     onStartMusic();
 
     confetti({
-      particleCount: 70,
+      particleCount: 75,
       spread: 75,
       origin: { y: 0.6 },
-      colors: ['#f43f5e', '#fb7185', '#fda4af', '#fef08a'],
+      colors: ['#f43f5e', '#fb7185', '#fda4af', '#f59e0b', '#e11d48'],
     });
   };
 
@@ -39,15 +39,15 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
         transition={{ duration: 0.8 }}
         className="text-center mb-6 max-w-md mx-auto z-10"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-wine-900/80 border border-rose-400/40 text-rose-200 text-xs tracking-widest uppercase shadow-lg shadow-rose-950/50 backdrop-blur-md mb-3">
-          <Plane className="w-3.5 h-3.5 text-champagne-300" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-rose-300 text-rose-800 text-xs tracking-widest uppercase shadow-md shadow-rose-200/50 backdrop-blur-md mb-3 font-semibold">
+          <Plane className="w-3.5 h-3.5 text-rose-600" />
           <span>Anniversary Express • Flight 0811</span>
-          <Sparkles className="w-3.5 h-3.5 text-champagne-300" />
+          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
         </div>
-        <h1 className="font-serif text-3xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-100 via-rose-200 to-rose-400 leading-tight">
+        <h1 className="font-serif text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-900 via-rose-700 to-rose-950 leading-tight">
           Two Years of Us
         </h1>
-        <p className="font-cursive text-xl text-champagne-300 mt-1">
+        <p className="font-cursive text-2xl text-rose-700 mt-1">
           Tiket perjalanan cinta kita dari 08 November 2024 hingga selamanya
         </p>
       </motion.div>
@@ -58,13 +58,13 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative bg-gradient-to-br from-rose-50 via-white to-rose-100 text-wine-950 rounded-3xl shadow-2xl overflow-hidden border border-rose-300"
+          className="relative bg-white text-rose-950 rounded-3xl shadow-2xl shadow-rose-300/40 overflow-hidden border-2 border-rose-200"
         >
           {/* Top Rose Foil Airline Header */}
           <div className="bg-gradient-to-r from-rose-700 via-rose-600 to-rose-800 text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                <Plane className="w-4 h-4 text-champagne-300" />
+                <Plane className="w-4 h-4 text-amber-300" />
               </div>
               <div>
                 <span className="font-serif text-sm font-bold tracking-wider uppercase block">
@@ -76,10 +76,10 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
               </div>
             </div>
             <div className="text-right font-mono">
-              <span className="text-xs font-bold text-champagne-300 block">
+              <span className="text-xs font-bold text-amber-300 block">
                 {data.flightNumber}
               </span>
-              <span className="text-[9px] text-rose-200 uppercase">
+              <span className="text-[9px] text-rose-200 uppercase font-semibold">
                 {data.classType}
               </span>
             </div>
@@ -88,15 +88,15 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
           {/* Ticket Body */}
           <div className="p-5">
             {/* Flight Route Display */}
-            <div className="flex items-center justify-between border-b border-rose-200 pb-4 mb-4">
+            <div className="flex items-center justify-between border-b border-rose-100 pb-4 mb-4">
               <div className="text-left">
-                <span className="text-[10px] font-mono text-rose-800 uppercase block font-semibold">
+                <span className="text-[10px] font-mono text-rose-700 uppercase block font-semibold">
                   Origin (Hari Pertama)
                 </span>
-                <span className="font-serif text-xl sm:text-2xl font-bold text-wine-950 block">
+                <span className="font-serif text-xl sm:text-2xl font-bold text-rose-950 block">
                   08 NOV 2024
                 </span>
-                <span className="text-xs text-rose-700 font-serif">Polinema Memories</span>
+                <span className="text-xs text-rose-600 font-serif">Polinema Memories</span>
               </div>
 
               {/* Middle Plane Icon */}
@@ -112,13 +112,13 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
               </div>
 
               <div className="text-right">
-                <span className="text-[10px] font-mono text-rose-800 uppercase block font-semibold">
+                <span className="text-[10px] font-mono text-rose-700 uppercase block font-semibold">
                   Destination (Tujuan)
                 </span>
-                <span className="font-serif text-xl sm:text-2xl font-bold text-wine-950 block">
+                <span className="font-serif text-xl sm:text-2xl font-bold text-rose-950 block">
                   FOREVER
                 </span>
-                <span className="text-xs text-rose-700 font-serif">Eternity & Beyond</span>
+                <span className="text-xs text-rose-600 font-serif">Eternity & Beyond</span>
               </div>
             </div>
 
@@ -128,7 +128,7 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
                 <span className="text-[9px] font-mono uppercase text-rose-700 block font-semibold">
                   Passenger
                 </span>
-                <span className="text-xs font-serif font-bold text-wine-950">
+                <span className="text-xs font-serif font-bold text-rose-950">
                   {data.passengerName}
                 </span>
               </div>
@@ -136,7 +136,7 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
                 <span className="text-[9px] font-mono uppercase text-rose-700 block font-semibold">
                   Seat
                 </span>
-                <span className="text-xs font-serif font-bold text-wine-950">
+                <span className="text-xs font-serif font-bold text-rose-950">
                   {data.seat}
                 </span>
               </div>
@@ -144,7 +144,7 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
                 <span className="text-[9px] font-mono uppercase text-rose-700 block font-semibold">
                   Gate
                 </span>
-                <span className="text-xs font-serif font-bold text-wine-950">
+                <span className="text-xs font-serif font-bold text-rose-950">
                   {data.gate}
                 </span>
               </div>
@@ -152,20 +152,22 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
 
             {/* Perforated Tear Line */}
             <div className="relative my-4 flex items-center justify-between">
-              <div className="w-4 h-8 bg-wine-950 rounded-r-full -ml-7 shadow-inner" />
+              <div className="w-4 h-8 bg-[#fff5f7] rounded-r-full -ml-7 shadow-inner border-r border-rose-200" />
               <div className="flex-1 border-b-2 border-dashed border-rose-300 mx-2" />
-              <div className="w-4 h-8 bg-wine-950 rounded-l-full -mr-7 shadow-inner" />
+              <div className="w-4 h-8 bg-[#fff5f7] rounded-l-full -mr-7 shadow-inner border-l border-rose-200" />
             </div>
 
             {/* Tearable Stub / Validation Area */}
             <div className="flex items-center justify-between pt-2">
               <div className="flex items-center gap-3">
-                <QrCode className="w-9 h-9 text-wine-900" />
+                <QrCode className="w-9 h-9 text-rose-900" />
                 <div className="text-left font-mono">
-                  <span className="text-[9px] text-rose-800 block">BOARDING STATUS:</span>
+                  <span className="text-[9px] text-rose-700 block font-semibold">
+                    BOARDING STATUS:
+                  </span>
                   <span
                     className={`text-xs font-bold ${
-                      isTorn ? 'text-emerald-700' : 'text-rose-700'
+                      isTorn ? 'text-emerald-600' : 'text-rose-600'
                     }`}
                   >
                     {isTorn ? 'VALIDATED & BOARDED 💖' : 'READY TO BOARD'}
@@ -178,13 +180,13 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
                 <button
                   type="button"
                   onClick={handleTear}
-                  className="py-2.5 px-4 rounded-xl bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-medium text-xs shadow-md shadow-rose-600/30 active:scale-95 transition-all flex items-center gap-1.5"
+                  className="py-2.5 px-4 rounded-xl bg-gradient-to-r from-rose-600 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white font-medium text-xs shadow-md shadow-rose-600/30 active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer"
                 >
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <Sparkles className="w-3.5 h-3.5 text-amber-200" />
                   <span>Validasi Tiket</span>
                 </button>
               ) : (
-                <div className="border-2 border-rose-600 text-rose-600 px-3 py-1 rounded-lg font-mono font-bold text-xs uppercase transform -rotate-6 shadow-sm flex items-center gap-1">
+                <div className="border-2 border-rose-600 text-rose-600 px-3 py-1 rounded-lg font-mono font-bold text-xs uppercase transform -rotate-6 shadow-sm flex items-center gap-1 bg-rose-50">
                   <Check className="w-3.5 h-3.5 text-rose-600" />
                   <span>BOARDED 08.11</span>
                 </div>
@@ -205,12 +207,12 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
               <button
                 type="button"
                 onClick={onEnterStudio}
-                className="py-3 px-6 rounded-full bg-gradient-to-r from-rose-600 via-rose-500 to-rose-600 hover:from-rose-500 hover:to-rose-400 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-rose-900/60 flex items-center gap-2 transition-transform active:scale-95 animate-pulse"
+                className="py-3 px-6 rounded-full bg-gradient-to-r from-rose-600 via-rose-500 to-rose-600 hover:from-rose-500 hover:to-rose-400 text-white font-bold text-xs sm:text-sm shadow-xl shadow-rose-400/40 flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
               >
                 <span>Masuk ke Studio Memori 730 Hari</span>
-                <ArrowDown className="w-4 h-4" />
+                <ArrowDown className="w-4 h-4 animate-bounce" />
               </button>
-              <span className="text-[11px] text-rose-300/80 font-mono">
+              <span className="text-[11px] text-rose-700/80 font-mono">
                 Musik romantis otomatis berputar menemani perjalananmu
               </span>
             </motion.div>

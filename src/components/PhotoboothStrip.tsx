@@ -138,13 +138,13 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
         transition={{ duration: 0.7 }}
         className="text-center mb-8 max-w-md mx-auto"
       >
-        <span className="font-serif text-xs tracking-widest text-rose-300 uppercase block mb-1">
+        <span className="font-serif text-xs tracking-widest text-rose-600 uppercase block mb-1 font-semibold">
           Viral Korean 4-Cut Studio
         </span>
-        <h2 className="font-cursive text-3xl sm:text-4xl text-rose-100">
+        <h2 className="font-cursive text-3xl sm:text-4xl text-rose-950">
           Our 4-Cut Photobooth Strip
         </h2>
-        <p className="text-xs text-rose-300/80 font-mono mt-1">
+        <p className="text-xs text-rose-700/80 font-mono mt-1">
           Potret kenangan 2 tahun kita dalam format photobooth klasik
         </p>
       </motion.div>
@@ -156,7 +156,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="relative w-64 sm:w-72 bg-gradient-to-b from-rose-50 via-white to-rose-50 text-wine-950 p-3 sm:p-4 rounded-2xl shadow-2xl border-2 border-rose-300 shadow-rose-950/60 flex flex-col items-center"
+        className="relative w-64 sm:w-72 bg-gradient-to-b from-rose-50 via-white to-rose-50 text-wine-950 p-3 sm:p-4 rounded-2xl shadow-2xl border-2 border-rose-300 shadow-rose-200/50 flex flex-col items-center"
       >
         {/* Header Ribbon */}
         <div className="w-full flex items-center justify-between pb-2 mb-2 border-b border-rose-200 text-rose-800">
@@ -180,7 +180,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
-              <div className="absolute bottom-1.5 left-2 bg-wine-950/70 text-rose-200 text-[10px] px-2 py-0.5 rounded backdrop-blur-sm font-serif">
+              <div className="absolute bottom-1.5 left-2 bg-wine-950/70 text-rose-100 text-[10px] px-2 py-0.5 rounded backdrop-blur-sm font-serif">
                 {photo.caption}
               </div>
             </div>
@@ -195,7 +195,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
           <p className="text-[10px] text-rose-800 font-mono tracking-wider font-semibold">
             2024.11.08 — 2026.11.08
           </p>
-          <div className="flex items-center justify-center gap-1 text-[9px] text-rose-600 mt-1">
+          <div className="flex items-center justify-center gap-1 text-[9px] text-rose-600 mt-1 font-semibold">
             <Sparkles className="w-2.5 h-2.5" />
             <span>Polinema • 730 Days of Sweet Love</span>
           </div>
@@ -214,7 +214,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
           type="button"
           disabled={isDownloading}
           onClick={handleDownloadStrip}
-          className="py-3 px-6 rounded-full bg-gradient-to-r from-rose-600 via-rose-500 to-rose-600 hover:from-rose-500 hover:to-rose-400 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-rose-900/50 flex items-center gap-2 transition-all active:scale-95"
+          className="py-3 px-6 rounded-full bg-gradient-to-r from-rose-600 via-rose-500 to-rose-600 hover:from-rose-500 hover:to-rose-400 text-white font-semibold text-xs sm:text-sm shadow-xl shadow-rose-400/40 flex items-center gap-2 transition-all active:scale-95 cursor-pointer"
         >
           {downloadSuccess ? (
             <>
@@ -232,7 +232,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
             </>
           )}
         </button>
-        <span className="text-[11px] text-rose-300/80 font-mono">
+        <span className="text-[11px] text-rose-700/80 font-mono">
           Gambar siap cetak atau disimpan langsung ke galeri HP
         </span>
       </motion.div>

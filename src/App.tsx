@@ -90,7 +90,7 @@ export const App: React.FC = () => {
     typeof window !== 'undefined' ? window.location.href : 'http://localhost:5173';
 
   return (
-    <div className="relative min-h-screen w-full bg-wine-950 text-slate-100 flex flex-col items-center overflow-x-hidden">
+    <div className="relative min-h-screen w-full bg-gradient-to-b from-[#fff6f8] via-[#fff0f3] to-[#fdf2f4] text-rose-950 flex flex-col items-center overflow-x-hidden">
       {/* Background Audio */}
       <audio
         ref={audioRef}

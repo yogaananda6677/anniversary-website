@@ -20,7 +20,7 @@ export const FloatingPetals: React.FC = () => {
     };
     window.addEventListener('resize', handleResize);
 
-    // Rose petals and glowing embers
+    // Rose petals and glowing embers in bright aesthetic colors
     interface Petal {
       x: number;
       y: number;
@@ -37,21 +37,22 @@ export const FloatingPetals: React.FC = () => {
     const colors = [
       'rgba(244, 63, 94, ',   // rose-500
       'rgba(251, 113, 133, ', // rose-400
-      'rgba(253, 164, 175, ', // rose-300
-      'rgba(254, 240, 138, ', // champagne gold
+      'rgba(225, 29, 72, ',   // rose-600
+      'rgba(245, 158, 11, ',  // warm gold
+      'rgba(253, 164, 175, ', // soft blush
     ];
 
-    const petals: Petal[] = Array.from({ length: 35 }).map(() => ({
+    const petals: Petal[] = Array.from({ length: 32 }).map(() => ({
       x: Math.random() * width,
       y: Math.random() * height,
       size: Math.random() * 8 + 4,
-      speedX: Math.random() * 1.2 - 0.6,
-      speedY: Math.random() * 0.9 + 0.4,
+      speedX: Math.random() * 1.0 - 0.5,
+      speedY: Math.random() * 0.8 + 0.35,
       rotation: Math.random() * Math.PI * 2,
       rotationSpeed: (Math.random() - 0.5) * 0.02,
-      opacity: Math.random() * 0.6 + 0.2,
+      opacity: Math.random() * 0.45 + 0.25,
       color: colors[Math.floor(Math.random() * colors.length)],
-      isHeart: Math.random() > 0.6,
+      isHeart: Math.random() > 0.55,
     }));
 
     const render = () => {
@@ -106,7 +107,7 @@ export const FloatingPetals: React.FC = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-80"
+      className="fixed inset-0 pointer-events-none z-0 opacity-70"
     />
   );
 };

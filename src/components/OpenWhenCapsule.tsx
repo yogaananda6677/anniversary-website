@@ -13,13 +13,13 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
   const getIcon = (name: string) => {
     switch (name) {
       case 'Smile':
-        return <Smile className="w-5 h-5 text-amber-300" />;
+        return <Smile className="w-5 h-5 text-amber-500" />;
       case 'ShieldHeart':
-        return <ShieldCheck className="w-5 h-5 text-purple-300" />;
+        return <ShieldCheck className="w-5 h-5 text-rose-600" />;
       case 'Sparkles':
-        return <Sparkles className="w-5 h-5 text-champagne-300" />;
+        return <Sparkles className="w-5 h-5 text-amber-500" />;
       default:
-        return <Heart className="w-5 h-5 text-rose-300" />;
+        return <Heart className="w-5 h-5 text-rose-500" />;
     }
   };
 
@@ -33,13 +33,13 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
         transition={{ duration: 0.7 }}
         className="text-center mb-8"
       >
-        <span className="font-serif text-xs tracking-widest text-rose-300 uppercase block mb-1">
+        <span className="font-serif text-xs tracking-widest text-rose-600 uppercase block mb-1 font-semibold">
           Secret Time Capsules
         </span>
-        <h2 className="font-cursive text-3xl sm:text-4xl text-rose-100">
+        <h2 className="font-cursive text-3xl sm:text-4xl text-rose-950">
           "Open When..." Letters
         </h2>
-        <p className="text-xs text-rose-300/80 font-mono mt-1">
+        <p className="text-xs text-rose-700/80 font-mono mt-1">
           4 Surat rahasia yang disiapkan khusus untuk menemani setiap suasana hatimu
         </p>
       </motion.div>
@@ -53,35 +53,35 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: index * 0.1 }}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             onClick={() => setSelectedLetter(letter)}
-            className="cursor-pointer glass-card-rose rounded-2xl p-5 border border-rose-500/30 hover:border-rose-400/60 transition-all shadow-xl relative overflow-hidden group text-left flex flex-col justify-between"
+            className="cursor-pointer bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-rose-200/90 hover:border-rose-300 hover:shadow-xl transition-all shadow-md relative overflow-hidden group text-left flex flex-col justify-between"
           >
             {/* Top Tag & Icon */}
             <div className="flex items-center justify-between mb-4">
-              <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-rose-950/80 border border-rose-500/30 text-champagne-300 font-semibold">
+              <span className="text-[10px] font-mono tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-rose-50 border border-rose-200 text-rose-800 font-bold">
                 {letter.badge}
               </span>
-              <div className="w-8 h-8 rounded-full bg-rose-950/70 border border-rose-500/30 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-rose-50 border border-rose-200 flex items-center justify-center">
                 {getIcon(letter.iconName)}
               </div>
             </div>
 
             {/* Letter Preview & Title */}
             <div>
-              <h3 className="font-serif text-base font-bold text-rose-100 group-hover:text-rose-200 transition-colors">
+              <h3 className="font-serif text-base font-bold text-rose-950 group-hover:text-rose-700 transition-colors">
                 {letter.title}
               </h3>
-              <p className="text-[11px] text-rose-300/70 font-mono mt-0.5">
+              <p className="text-[11px] text-rose-700/80 font-mono mt-0.5">
                 {letter.subtitle}
               </p>
             </div>
 
             {/* Bottom Envelope Stamp Accent */}
-            <div className="mt-4 pt-3 border-t border-rose-900/50 flex items-center justify-between text-xs text-rose-400 group-hover:text-rose-200">
-              <span className="font-mono text-[10px]">Ketuk untuk membuka</span>
-              <Mail className="w-4 h-4 text-rose-400 group-hover:scale-110 transition-transform" />
+            <div className="mt-4 pt-3 border-t border-rose-100 flex items-center justify-between text-xs text-rose-600 group-hover:text-rose-800">
+              <span className="font-mono text-[10px] font-semibold">Ketuk untuk membuka</span>
+              <Mail className="w-4 h-4 text-rose-500 group-hover:scale-110 transition-transform" />
             </div>
           </motion.div>
         ))}
@@ -90,18 +90,18 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
       {/* Modal Letter Reader */}
       <AnimatePresence>
         {selectedLetter && (
-          <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-md bg-gradient-to-b from-rose-50 via-white to-rose-100 text-wine-950 rounded-3xl p-6 sm:p-7 shadow-2xl border-2 border-rose-300 text-left overflow-hidden"
+              className="relative w-full max-w-md bg-gradient-to-b from-rose-50 via-white to-rose-50 text-rose-950 rounded-3xl p-6 sm:p-7 shadow-2xl border-2 border-rose-200 text-left overflow-hidden"
             >
               {/* Close Button */}
               <button
                 type="button"
                 onClick={() => setSelectedLetter(null)}
-                className="absolute top-4 right-4 p-1.5 rounded-full bg-rose-200/80 text-wine-950 hover:bg-rose-300 transition-colors"
+                className="absolute top-4 right-4 p-1.5 rounded-full bg-rose-100 text-rose-800 hover:bg-rose-200 transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -115,20 +115,20 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
                   <span className="text-[10px] font-mono uppercase tracking-widest text-rose-800 font-bold block">
                     {selectedLetter.badge} • SPECIAL CAPSULE
                   </span>
-                  <span className="font-serif text-xs text-rose-900">
+                  <span className="font-serif text-xs text-rose-900 font-semibold">
                     Untuk Sayangku
                   </span>
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="font-serif text-lg sm:text-xl font-bold text-wine-950 mb-4 mt-2">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-rose-950 mb-4 mt-2">
                 {selectedLetter.title}
               </h3>
 
               {/* Letter Content */}
-              <div className="bg-white/80 p-4 rounded-xl border border-rose-200 mb-5 shadow-inner">
-                <p className="font-serif text-sm leading-relaxed text-wine-950 italic">
+              <div className="bg-white/90 p-4 rounded-xl border border-rose-200 mb-5 shadow-sm">
+                <p className="font-serif text-sm leading-relaxed text-rose-950 italic">
                   "{selectedLetter.content}"
                 </p>
               </div>
@@ -139,7 +139,7 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
                   <p className="font-cursive text-xl text-rose-800">
                     Always by your side,
                   </p>
-                  <p className="font-serif text-xs font-bold text-wine-950">
+                  <p className="font-serif text-xs font-bold text-rose-950">
                     Yoga Ananda
                   </p>
                 </div>

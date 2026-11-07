@@ -27,15 +27,15 @@ export const TypewriterLetter: React.FC<TypewriterLetterProps> = ({
         transition={{ duration: 0.7 }}
         className="text-center mb-8"
       >
-        <span className="font-serif text-xs tracking-widest text-rose-300 uppercase block mb-1">
+        <span className="font-serif text-xs tracking-widest text-rose-600 uppercase block mb-1 font-semibold">
           A Written Testament of Love
         </span>
-        <h2 className="font-cursive text-3xl sm:text-4xl text-rose-100">
+        <h2 className="font-cursive text-3xl sm:text-4xl text-rose-950">
           {title}
         </h2>
         <div className="flex items-center justify-center gap-2 mt-2">
           <span className="w-10 h-px bg-gradient-to-r from-transparent to-rose-400" />
-          <Feather className="w-3.5 h-3.5 text-rose-400" />
+          <Feather className="w-3.5 h-3.5 text-rose-600" />
           <span className="w-10 h-px bg-gradient-to-l from-transparent to-rose-400" />
         </div>
       </motion.div>
@@ -46,20 +46,20 @@ export const TypewriterLetter: React.FC<TypewriterLetterProps> = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8 }}
-        className="relative bg-gradient-to-b from-[#fffbf5] via-[#fff8ef] to-[#fef3e2] text-[#2c1810] p-6 sm:p-9 rounded-3xl shadow-2xl border border-amber-200/80 text-left overflow-hidden"
+        className="relative bg-gradient-to-b from-[#fffcf8] via-[#fff8ef] to-[#fef4e6] text-[#2c1810] p-6 sm:p-9 rounded-3xl shadow-xl border-2 border-amber-200/90 text-left overflow-hidden"
       >
-        {/* Subtle Paper Lines / Texture */}
+        {/* Subtle Paper Lines */}
         <div className="absolute inset-0 opacity-5 bg-[linear-gradient(#2c1810_1px,transparent_1px)] [background-size:100%_28px] pointer-events-none" />
 
         {/* Paper Header */}
-        <div className="flex items-center justify-between border-b border-amber-900/20 pb-3 mb-6">
+        <div className="flex items-center justify-between border-b border-amber-900/15 pb-3 mb-6">
           <div className="flex items-center gap-2 text-rose-800">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span className="font-mono text-[11px] tracking-wider uppercase font-semibold">
+            <Sparkles className="w-3.5 h-3.5 text-rose-600" />
+            <span className="font-mono text-[11px] tracking-wider uppercase font-bold">
               SPECIAL 2ND ANNIVERSARY EDITION
             </span>
           </div>
-          <span className="font-mono text-[10px] text-amber-900/70">
+          <span className="font-mono text-[10px] text-amber-900/80 font-semibold">
             {dateText}
           </span>
         </div>
@@ -74,7 +74,7 @@ export const TypewriterLetter: React.FC<TypewriterLetterProps> = ({
         </div>
 
         {/* Signoff & Seal */}
-        <div className="mt-8 pt-4 border-t border-amber-900/20 flex items-center justify-between">
+        <div className="mt-8 pt-4 border-t border-amber-900/15 flex items-center justify-between">
           <div>
             <p className="font-cursive text-2xl text-rose-800">
               {signoff}
