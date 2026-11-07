@@ -1,45 +1,57 @@
-export interface LoveReason {
-  id: number;
+export interface BoardingPassData {
+  flightNumber: string;
+  passengerName: string;
+  relationshipStartDate: string;
+  anniversaryDate: string;
+  fromDestination: string;
+  toDestination: string;
+  seat: string;
+  classType: string;
+  gate: string;
+}
+
+export interface PhotoboothPhoto {
+  src: string;
+  caption: string;
+}
+
+export interface OpenWhenLetter {
+  id: string;
   title: string;
-  desc: string;
+  subtitle: string;
   iconName: string;
+  badge: string;
+  color: string;
+  content: string;
 }
 
-export interface Milestone {
-  date: string;
-  title: string;
-  description: string;
-  photo?: string;
+export interface PolaroidDeskItem {
+  id: string;
+  src: string;
+  caption: string;
+  defaultX: number;
+  defaultY: number;
+  rotation: number;
 }
 
-export interface AnniversaryData {
+export interface AnniversaryOverhaulData {
   coupleName: string;
   girlfriendName: string;
   startDate: string; // '2024-11-08'
   anniversaryDate: string; // '2026-11-08'
-  yearsTogether: number;
-  heroGreeting: string;
-  heroSubtitle: string;
   musicTitle: string;
   musicArtist: string;
   musicUrl: string;
-  cakeWishTitle: string;
-  cakeWishMessage: string;
-  shortLetterTitle: string;
-  shortLetterContent: string;
-  longLetterTitle: string;
-  longLetterContent: string[];
-  closingQuote: string;
-  mirrorPhoto: string;
-  scrapbookPhoto: string;
-  polaroidPhotos: Array<{
-    src: string;
-    caption: string;
-    rotation: number;
-  }>;
-  galleryPhotos: Array<{
-    src: string;
-    caption: string;
-  }>;
-  loveReasons: LoveReason[];
+  boardingPass: BoardingPassData;
+  photoboothPhotos: PhotoboothPhoto[];
+  openWhenLetters: OpenWhenLetter[];
+  polaroidDeskPhotos: PolaroidDeskItem[];
+  typewriterLetter: {
+    title: string;
+    dateText: string;
+    paragraphs: string[];
+    signoff: string;
+    author: string;
+  };
+  lanternWishes: string[];
 }

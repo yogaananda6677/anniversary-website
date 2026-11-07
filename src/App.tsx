@@ -3,14 +3,13 @@ import confetti from 'canvas-confetti';
 import { ANNIVERSARY_DATA } from './data/anniversaryData';
 import { FloatingPetals } from './components/FloatingPetals';
 import { NavbarMusic } from './components/NavbarMusic';
-import { HeroEnvelope } from './components/HeroEnvelope';
-import { LoveTimerSection } from './components/LoveTimerSection';
-import { AnniversaryCakeSection } from './components/AnniversaryCakeSection';
-import { ReasonsWhySection } from './components/ReasonsWhySection';
-import { OurStoryScrapbook } from './components/OurStoryScrapbook';
-import { HeartfeltLetter } from './components/HeartfeltLetter';
-import { PhotoGallerySection } from './components/PhotoGallerySection';
-import { FooterSection } from './components/FooterSection';
+import { BoardingPassHero } from './components/BoardingPassHero';
+import { LoveBentoDashboard } from './components/LoveBentoDashboard';
+import { PhotoboothStrip } from './components/PhotoboothStrip';
+import { OpenWhenCapsule } from './components/OpenWhenCapsule';
+import { DraggablePolaroidDesk } from './components/DraggablePolaroidDesk';
+import { TypewriterLetter } from './components/TypewriterLetter';
+import { SkyLanternFinale } from './components/SkyLanternFinale';
 import { LoveQuizModal } from './components/LoveQuizModal';
 import { HeartQRModal } from './components/HeartQRModal';
 
@@ -18,10 +17,9 @@ export const App: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isQROpen, setIsQROpen] = useState(false);
   const [isQuizOpen, setIsQuizOpen] = useState(false);
-  const [selectedPhoto, setSelectedPhoto] = useState<{ src: string; caption: string } | null>(null);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const loveTimerRef = useRef<HTMLDivElement | null>(null);
+  const studioRef = useRef<HTMLDivElement | null>(null);
 
   // Audio Playback
   const togglePlay = () => {
@@ -51,10 +49,10 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleScrollToLoveTimer = () => {
+  const handleScrollToStudio = () => {
     handleStartMusic();
-    if (loveTimerRef.current) {
-      loveTimerRef.current.scrollIntoView({ behavior: 'smooth' });
+    if (studioRef.current) {
+      studioRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -62,7 +60,6 @@ export const App: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Celebrate with Fireworks
   const handleCelebrate = () => {
     const duration = 2.5 * 1000;
     const end = Date.now() + duration;
@@ -94,7 +91,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-wine-950 text-slate-100 flex flex-col items-center overflow-x-hidden">
-      {/* Background HTML5 Audio Element */}
+      {/* Background Audio */}
       <audio
         ref={audioRef}
         src={ANNIVERSARY_DATA.musicUrl}
@@ -104,10 +101,10 @@ export const App: React.FC = () => {
         onPause={() => setIsPlaying(false)}
       />
 
-      {/* Floating Rose Petals & Embers Canvas */}
+      {/* Floating Rose Petals Canvas Atmosphere */}
       <FloatingPetals />
 
-      {/* Top Floating Music Navigation */}
+      {/* Floating Navbar with Music & Shortcuts */}
       <NavbarMusic
         isPlaying={isPlaying}
         onTogglePlay={togglePlay}
@@ -118,57 +115,62 @@ export const App: React.FC = () => {
         onCelebrate={handleCelebrate}
       />
 
-      {/* Main Continuous Story Flow */}
-      <main className="w-full max-w-lg z-10 space-y-12 sm:space-y-16">
-        {/* Slide 1: 3D Wax Seal Envelope Intro */}
-        <HeroEnvelope
-          data={ANNIVERSARY_DATA}
+      {/* Main Experience Container */}
+      <main className="w-full max-w-xl z-10 space-y-12 sm:space-y-16">
+        {/* ACT 1: Interactive Boarding Pass Ticket to Year 2 */}
+        <BoardingPassHero
+          data={ANNIVERSARY_DATA.boardingPass}
           onStartMusic={handleStartMusic}
-          onContinue={handleScrollToLoveTimer}
+          onEnterStudio={handleScrollToStudio}
         />
 
-        {/* Slide 2: The Day Our Story Began & Live Love Journey Counter */}
-        <div ref={loveTimerRef} className="scroll-mt-16">
-          <LoveTimerSection data={ANNIVERSARY_DATA} />
+        {/* ACT 2: The 730 Days Bento Studio */}
+        <div ref={studioRef} className="scroll-mt-16">
+          <LoveBentoDashboard
+            startDate={ANNIVERSARY_DATA.startDate}
+            musicTitle={ANNIVERSARY_DATA.musicTitle}
+            musicArtist={ANNIVERSARY_DATA.musicArtist}
+            isPlaying={isPlaying}
+            onTogglePlay={togglePlay}
+          />
         </div>
 
-        {/* Slide 3: Retro Camera Scrapbook & Interactive Anniversary Cake Toast */}
-        <AnniversaryCakeSection data={ANNIVERSARY_DATA} />
-
-        {/* Slide 4: 4 Hal yang Bikin Selalu Jatuh Cinta (Reasons Why) */}
-        <ReasonsWhySection data={ANNIVERSARY_DATA} />
-
-        {/* Slide 5: Scrapbook of Memories & Polaroid Gallery */}
-        <OurStoryScrapbook
-          data={ANNIVERSARY_DATA}
-          onSelectPhoto={(src, caption) => setSelectedPhoto({ src, caption })}
+        {/* ACT 3: Korean 4-Cut Photobooth Strip (with Download PNG) */}
+        <PhotoboothStrip
+          photos={ANNIVERSARY_DATA.photoboothPhotos}
+          coupleName={ANNIVERSARY_DATA.coupleName}
         />
 
-        {/* Slide 6: Classic Ornate Mirror & Long Heartfelt Love Letter */}
-        <HeartfeltLetter data={ANNIVERSARY_DATA} />
+        {/* ACT 4: "Open When..." Interactive Capsule Envelopes */}
+        <OpenWhenCapsule letters={ANNIVERSARY_DATA.openWhenLetters} />
 
-        {/* Slide 7: Rotating Golden Moon & Full Photo Album */}
-        <PhotoGallerySection
-          data={ANNIVERSARY_DATA}
-          selectedPhoto={selectedPhoto}
-          onSelectPhoto={setSelectedPhoto}
+        {/* ACT 5: Meja Polaroid Fisik (Draggable & Tossable Polaroids) */}
+        <DraggablePolaroidDesk photos={ANNIVERSARY_DATA.polaroidDeskPhotos} />
+
+        {/* ACT 6: Surat Cinta Mesin Tik Estetis (Typewriter Letter) */}
+        <TypewriterLetter
+          title={ANNIVERSARY_DATA.typewriterLetter.title}
+          dateText={ANNIVERSARY_DATA.typewriterLetter.dateText}
+          paragraphs={ANNIVERSARY_DATA.typewriterLetter.paragraphs}
+          signoff={ANNIVERSARY_DATA.typewriterLetter.signoff}
+          author={ANNIVERSARY_DATA.typewriterLetter.author}
         />
 
-        {/* Footer */}
-        <FooterSection
-          girlfriendName={ANNIVERSARY_DATA.girlfriendName}
+        {/* ACT 7: Sky Lantern Wishing Finale & Fireworks */}
+        <SkyLanternFinale
+          wishes={ANNIVERSARY_DATA.lanternWishes}
+          coupleName={ANNIVERSARY_DATA.coupleName}
+          onOpenQR={() => setIsQROpen(true)}
           onScrollToTop={handleScrollToTop}
-          onCelebrate={handleCelebrate}
         />
       </main>
 
-      {/* Mini Couple Quiz Modal */}
+      {/* Modals */}
       <LoveQuizModal
         isOpen={isQuizOpen}
         onClose={() => setIsQuizOpen(false)}
       />
 
-      {/* Heart QR Code Modal */}
       {isQROpen && (
         <HeartQRModal
           url={currentUrl}
