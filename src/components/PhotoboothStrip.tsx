@@ -28,7 +28,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
       const stripWidth = 600;
       const padding = 36;
       const photoWidth = stripWidth - padding * 2; // 528
-      const photoHeight = 396; // 4:3 aspect
+      const photoHeight = Math.round(photoWidth * (4 / 3)); // 704 (exact 3:4 portrait ratio matching the photos)
       const photoGap = 20;
       const headerHeight = 70;
       const footerHeight = 120;
@@ -71,12 +71,13 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
         ctx.roundRect(padding, currentY, photoWidth, photoHeight, 8);
         ctx.clip();
 
-        // Calculate aspect fill
+        // Calculate aspect fill with top-priority alignment (never crop heads)
         const hRatio = photoWidth / img.width;
         const vRatio = photoHeight / img.height;
         const ratio = Math.max(hRatio, vRatio);
         const centerShiftX = (photoWidth - img.width * ratio) / 2;
-        const centerShiftY = (photoHeight - img.height * ratio) / 2;
+        // Align to top so heads/hats are 100% visible
+        const topShiftY = 0;
 
         ctx.drawImage(
           img,
@@ -85,7 +86,7 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
           img.width,
           img.height,
           padding + centerShiftX,
-          currentY + centerShiftY,
+          currentY + topShiftY,
           img.width * ratio,
           img.height * ratio
         );
@@ -172,12 +173,12 @@ export const PhotoboothStrip: React.FC<PhotoboothStripProps> = ({
           {photos.map((photo, index) => (
             <div
               key={index}
-              className="relative aspect-[4/3] w-full rounded-lg overflow-hidden border border-rose-300 shadow-sm bg-rose-100/50 group"
+              className="relative aspect-[3/4] w-full rounded-lg overflow-hidden border border-rose-300 shadow-sm bg-rose-100/50 group"
             >
               <img
                 src={photo.src}
                 alt={photo.caption}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute bottom-1.5 left-2 bg-wine-950/70 text-rose-100 text-[10px] px-2 py-0.5 rounded backdrop-blur-sm font-serif">
