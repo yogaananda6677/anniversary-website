@@ -116,7 +116,7 @@ export const OpenWhenCapsule: React.FC<OpenWhenCapsuleProps> = ({ letters }) => 
                     {selectedLetter.badge} • SPECIAL CAPSULE
                   </span>
                   <span className="font-serif text-xs text-rose-900 font-semibold">
-                    Untuk Sayangku
+                    Untuk Della Tercinta
                   </span>
                 </div>
               </div>

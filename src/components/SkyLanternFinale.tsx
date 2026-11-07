@@ -151,7 +151,7 @@ export const SkyLanternFinale: React.FC<SkyLanternFinaleProps> = ({
           <div className="relative w-36 sm:w-40 h-48 sm:h-52 bg-gradient-to-t from-amber-500 via-rose-500 to-amber-300 rounded-t-3xl rounded-b-2xl shadow-[0_10px_40px_rgba(245,158,11,0.45)] border-2 border-amber-200 flex flex-col items-center justify-between p-3.5 overflow-hidden text-center">
             {/* Header Tag */}
             <span className="text-[10px] font-mono text-wine-950 font-black uppercase tracking-wider bg-amber-100/60 px-2 py-0.5 rounded-full">
-              YOGA & SAYANG • YEAR 3
+              YOGA & DELLA • YEAR 3
             </span>
 
             {/* Central Heart & Dynamic Live Wish Preview */}
@@ -343,7 +343,7 @@ export const SkyLanternFinale: React.FC<SkyLanternFinaleProps> = ({
               {/* Hero Lantern Body */}
               <div className="relative w-36 sm:w-44 h-48 sm:h-56 bg-gradient-to-t from-amber-500 via-rose-500 to-amber-300 rounded-t-3xl rounded-b-2xl shadow-[0_0_70px_25px_rgba(245,158,11,0.7)] border-2 border-amber-200 flex flex-col items-center justify-between p-4 overflow-hidden text-center">
                 <span className="text-[10px] font-mono text-wine-950 font-black uppercase tracking-wider bg-amber-100/70 px-2 py-0.5 rounded-full">
-                  YOGA & SAYANG • YEAR 3
+                  YOGA & DELLA • YEAR 3
                 </span>
 
                 <div className="flex flex-col items-center gap-1.5 px-2 my-auto">
@@ -402,7 +402,7 @@ export const SkyLanternFinale: React.FC<SkyLanternFinaleProps> = ({
               </div>
 
               <p className="text-xs text-rose-800 font-serif leading-relaxed mb-6">
-                Doa dan harapan cinta kita berdua di tahun ke-3 telah berhasil diterbangkan ke langit tertinggi. Semoga setiap detik perjalanan cinta Yoga & Sayang selalu dilimpahi kebahagiaan, kesehatan, dan keabadian.
+                Doa dan harapan cinta kita berdua di tahun ke-3 telah berhasil diterbangkan ke langit tertinggi. Semoga setiap detik perjalanan cinta Yoga & Della selalu dilimpahi kebahagiaan, kesehatan, dan keabadian.
               </p>
 
               <div className="flex gap-2.5 justify-center">

@@ -48,7 +48,7 @@ export const BoardingPassHero: React.FC<BoardingPassHeroProps> = ({
           Two Years of Us
         </h1>
         <p className="font-cursive text-2xl text-rose-700 mt-1">
-          Tiket perjalanan cinta kita dari 08 November 2024 hingga selamanya
+          Tiket perjalanan cinta Yoga & Della dari 08 November 2024 hingga selamanya
         </p>
       </motion.div>
 

@@ -42,9 +42,9 @@ export const LoveQuizModal: React.FC<LoveQuizModalProps> = ({ isOpen, onClose })
     {
       id: 4,
       question: 'Siapa orang yang paling berharga dan dicintai di dunia ini?',
-      options: ['Kamu (Sayangku)', 'Tentu saja Kamu!', 'Selalu Kamu, selamanya.'],
+      options: ['Della (Kekasih Hatiku)', 'Tentu saja Della!', 'Selalu Della, selamanya.'],
       correctAnswer: 0, // all options are winners!
-      explanation: 'Kamu adalah segalanya bagiku, hari ini dan selamanya. ❤️',
+      explanation: 'Della adalah segalanya bagiku, hari ini dan selamanya. ❤️',
     },
   ];
 

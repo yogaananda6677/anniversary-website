@@ -1,8 +1,8 @@
 import { AnniversaryOverhaulData } from '../types';
 
 export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
-  coupleName: 'Yoga & Sayang',
-  girlfriendName: 'Sayangku',
+  coupleName: 'Yoga & Della',
+  girlfriendName: 'Della',
   startDate: '2024-11-08',
   anniversaryDate: '2026-11-08',
 
@@ -12,7 +12,7 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
 
   boardingPass: {
     flightNumber: 'LOVE-0811',
-    passengerName: 'Yoga & Sayang',
+    passengerName: 'Yoga & Della',
     relationshipStartDate: '08 NOV 2024',
     anniversaryDate: '08 NOV 2026',
     fromDestination: 'FIRST DATE (08.11.2024)',
@@ -50,7 +50,7 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
       badge: 'Rindu',
       color: 'from-rose-600 to-pink-500',
       content:
-        'Kapanpun kamu merasa rindu, pejamkan matamu dan ingatlah bahwa ada seseorang di sini yang selalu memikirkanmu setiap detik. Jarak atau kesibukan tak akan pernah bisa mengurangi rasa sayangku padamu. Ingat senyum kita di foto-foto ini, dan tunggu pelukan hangatku saat kita bertemu nanti. Aku selalu di sini untukmu.',
+        'Kapanpun kamu merasa rindu, pejamkan matamu dan ingatlah bahwa ada seseorang di sini yang selalu memikirkanmu setiap detik. Jarak atau kesibukan tak akan pernah bisa mengurangi rasa sayangku padamu, Della. Ingat senyum kita di foto-foto ini, dan tunggu pelukan hangatku saat kita bertemu nanti. Aku selalu di sini untukmu.',
     },
     {
       id: 'hard-day',
@@ -60,7 +60,7 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
       badge: 'Semangat',
       color: 'from-amber-600 to-rose-500',
       content:
-        'Tarik napas perlahan ya sayang. Kamu sudah berjuang dengan sangat luar biasa hari ini. Apapun yang membuatmu lelah, sedih, atau merasa kewalahan, ingatlah bahwa kamu tidak sendirian. Ada aku yang siap mendengarkan semua ceritamu tanpa menghakimi. Istirahatlah dengan tenang, besok adalah hari yang baru, dan kamu tetap orang terhebat di mataku.',
+        'Tarik napas perlahan ya Della sayang. Kamu sudah berjuang dengan sangat luar biasa hari ini. Apapun yang membuatmu lelah, sedih, atau merasa kewalahan, ingatlah bahwa kamu tidak sendirian. Ada aku yang siap mendengarkan semua ceritamu tanpa menghakimi. Istirahatlah dengan tenang, besok adalah hari yang baru, dan kamu tetap orang terhebat di mataku.',
     },
     {
       id: 'doubt-us',
@@ -70,7 +70,7 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
       badge: 'Janji Cinta',
       color: 'from-purple-600 to-rose-500',
       content:
-        'Dua tahun yang lalu, di tanggal 8 November 2024, aku membuat keputusan terbaik dalam hidupku: memilihmu untuk menjadi bagian dari masa depanku. Kita sudah melewati berbagai cerita, tawa, dan tantangan bersama. Rasa sayang dan komitmenku padamu tidak pernah berkurang sedikitpun. Kita akan terus melangkah berdampingan hingga hari esok dan seterusnya.',
+        'Dua tahun yang lalu, di tanggal 8 November 2024, aku membuat keputusan terbaik dalam hidupku: memilihmu, Della, untuk menjadi bagian dari masa depanku. Kita sudah melewati berbagai cerita, tawa, dan tantangan bersama. Rasa sayang dan komitmenku padamu tidak pernah berkurang sedikitpun. Kita akan terus melangkah berdampingan hingga hari esok dan seterusnya.',
     },
     {
       id: 'anniversary-day',
@@ -80,7 +80,7 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
       badge: '08 November',
       color: 'from-rose-500 to-amber-500',
       content:
-        'Selamat 2 tahun bersama, bidadariku tercinta! 730 hari penuh warna, tawa lepas, kehangatan, dan cinta yang tumbuh setiap harinya. Terima kasih sudah menjadi teman hidup, partner terbaik, dan rumah paling damai untuk pulang. Mari kita terus saling menggenggam tangan untuk tahun-tahun indah berikutnya. I love you more than words could ever say!',
+        'Selamat 2 tahun bersama, Della tercinta! 730 hari penuh warna, tawa lepas, kehangatan, dan cinta yang tumbuh setiap harinya. Terima kasih sudah menjadi teman hidup, partner terbaik, dan rumah paling damai untuk pulang. Mari kita terus saling menggenggam tangan untuk tahun-tahun indah berikutnya. I love you more than words could ever say!',
     },
   ],
 
@@ -136,23 +136,23 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
   ],
 
   typewriterLetter: {
-    title: 'Warkat Kasih: Dua Tahun Perjalanan Kita',
+    title: 'Warkat Kasih: Dua Tahun Yoga & Della',
     dateText: 'Ditulis dengan cinta • 08 November 2026',
     paragraphs: [
-      'Kepada kekasih hatiku, pemilik senyuman paling menenangkan di seluruh semesta.',
-      'Dua tahun yang lalu, tepatnya pada 8 November 2024, sebuah babak baru yang begitu indah dimulai dalam hidupku. Kita mengawali cerita ini dengan kesederhanaan, berjalan beriringan dari hari-hari perkuliahan di kampus, berbagi cerita kecil yang selalu penuh tawa, hingga saling menguatkan di saat dunia sedang terasa begitu melelahkan.',
+      'Kepada Della kekasih hatiku, pemilik senyuman paling menenangkan di seluruh semesta.',
+      'Dua tahun yang lalu, tepatnya pada 8 November 2024, sebuah babak baru yang begitu indah dimulai dalam hidupku. Kita mengawali cerita ini dengan kesederhanaan, berjalan beriringan dari hari-hari perkuliahan di kampus Politeknik Negeri Malang, berbagi cerita kecil yang selalu penuh tawa, hingga saling menguatkan di saat dunia sedang terasa begitu melelahkan.',
       '730 hari telah kita lewati bersama. Waktu terasa berjalan begitu cepat saat dihabiskan dengan orang yang tepat. Terima kasih telah menjadi sosok yang begitu sabar, penuh kehangatan, dan selalu menerimaku apa adanya. Di setiap pelukanmu, aku menemukan ketenangan yang tak pernah kutemukan di tempat lain.',
       'Melalui warkat sederhana ini, aku ingin menegaskan kembali janjiku: untuk terus mencintaimu, menjaga senyuman di bibirmu, dan melangkah berdampingan menuju mimpi-mimpi besar yang sedang kita rajut bersama.',
-      'Selamat ulang tahun kebersamaan kita yang ke-2, sayangku. Semoga cinta kita senantiasa diberkahi, tumbuh semakin dewasa, dan abadi selamanya.'
+      'Selamat ulang tahun kebersamaan kita yang ke-2, Della sayangku. Semoga cinta kita senantiasa diberkahi, tumbuh semakin dewasa, dan abadi selamanya.'
     ],
     signoff: 'Dengan segenap rasa cinta yang tak berujung,',
     author: 'Yoga Ananda',
   },
 
   lanternWishes: [
-    'Semoga kita berdua selalu diberikan kesehatan, kelancaran rezeki, dan kebahagiaan berlimpah.',
-    'Semoga cinta kita semakin dewasa, saling memahami, dan dijauhkan dari hal-hal yang memisahkan.',
-    'Semoga impian kita untuk masa depan bersama dan melangkah ke jenjang yang lebih serius dimudahkan.',
-    'Semoga senyuman manis bidadariku tidak pernah pudar di setiap harinya.',
+    'Semoga Yoga & Della selalu diberikan kesehatan, kelancaran rezeki, dan kebahagiaan berlimpah.',
+    'Semoga cinta Yoga & Della semakin dewasa, saling memahami, dan dijauhkan dari hal-hal yang memisahkan.',
+    'Semoga impian masa depan Yoga & Della untuk melangkah ke jenjang yang lebih serius senantiasa dimudahkan.',
+    'Semoga senyuman manis Della tidak pernah pudar di setiap hari yang kita lalui bersama.',
   ],
 };
