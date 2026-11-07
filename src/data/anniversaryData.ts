@@ -127,7 +127,7 @@ export const ANNIVERSARY_DATA: AnniversaryOverhaulData = {
     },
     {
       id: 'p6',
-      src: '/photos/IMG_4614.jpg',
+      src: '/photos/IMG_4621.jpg',
       caption: 'Senyum yang Selalu Bikin Hangat 🌸',
       defaultX: -10,
       defaultY: 45,
